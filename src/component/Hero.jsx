@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { IoClose } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { FaChartLine, FaChartPie, FaClock } from "react-icons/fa";
 
 function Hero() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,6 +46,49 @@ function Hero() {
                     </div>
                 </div>
             </div>
+
+            {/* Analysis Section */}
+
+            <section className='bg-[#0d0c1d] py-16 px-4'>
+                <div className='container mx-auto flex flex-col lg:flex-row items-center'>
+                    <div className='w-full lg:w-1/2 flex justify-center mb-12 lg:mb-0'>
+                        <div className='bg-[#12122b] rounded-lg shadow-lg'>
+                            <img src="img1.png" alt="" />
+                        </div>
+                    </div>
+                    <div className='w-full lg:w-1/2 px-4'>
+                        <h2 className='text-4xl text-white font-semibold mb-6'>Detailed Analysis To Make Big Decisions</h2>
+                        <p className='text-gray-400 mb-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nam doloribus ad?</p>
+
+                        <div className='space-y-8'>
+                            <div className='flex items-start'>
+                                <FaChartPie size={32} className='text-purple-500 mr-4' />
+
+                                <div>
+                                    <h3 className='text-xl text-white font-semibold'>Char Combinations</h3>
+                                    <p className='text-gray-400'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores aliquam dolorum nam, quas deleniti impedit?</p>
+                                </div>
+                            </div>
+                            <div className='flex items-start'>
+                                <FaChartLine size={32} className='text-purple-500 mr-4' />
+
+                                <div>
+                                    <h3 className='text-xl text-white font-semibold'>Char Combinations</h3>
+                                    <p className='text-gray-400'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores aliquam dolorum nam, quas deleniti impedit?</p>
+                                </div>
+                            </div>
+                            <div className='flex items-start'>
+                                <FaClock size={32} className='text-purple-500 mr-4' />
+
+                                <div>
+                                    <h3 className='text-xl text-white font-semibold'>Char Combinations</h3>
+                                    <p className='text-gray-400'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores aliquam dolorum nam, quas deleniti impedit?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
