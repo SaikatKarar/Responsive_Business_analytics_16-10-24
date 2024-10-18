@@ -1,9 +1,32 @@
 import React, { useState } from 'react'
 import { IoClose } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { FaChartLine, FaChartPie, FaClock } from "react-icons/fa";
+import { FaChartLine, FaChartPie, FaClock, FaFileAlt, FaFlag, FaRoad } from "react-icons/fa";
 
 function Hero() {
+    const features = [
+        {
+            icon: <FaChartLine size={28} className='text-purple-500' />,
+            title: 'Realtime Dashboard',
+            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi totam possimus nulla. Quasi quia laudantium facilis? Nostrum, dicta!'
+        },
+        {
+            icon: <FaFlag size={28} className='text-purple-500' />,
+            title: 'Realtime Dashboard',
+            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi totam possimus nulla. Quasi quia laudantium facilis? Nostrum, dicta!'
+        },
+        {
+            icon: <FaFileAlt size={28} className='text-purple-500' />,
+            title: 'Realtime Dashboard',
+            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi totam possimus nulla. Quasi quia laudantium facilis? Nostrum, dicta!'
+        },
+        {
+            icon: <FaRoad size={28} className='text-purple-500' />,
+            title: 'Realtime Dashboard',
+            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi totam possimus nulla. Quasi quia laudantium facilis? Nostrum, dicta!'
+        },
+    ]
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -89,6 +112,127 @@ function Hero() {
                     </div>
                 </div>
             </section>
+
+            {/*  */}
+            <div className='bg-[#0d0c1d] py-12'>
+                <div className='max-w-6xl mx-auto text-center'>
+                    <h2 className='text-4xl font-bold text-white mb-4'>Integration</h2>
+                    <p className='text-gray-400 mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius magni, et maxime veritatis delectus iusto nesciunt.</p>
+                    <div className='flex justify-center mb-6'>
+                        <button className='bg-pink-500 text-white py-2 px-5 rounded-full hover:bg-pink-600 transition duration-300'>VIEW ALL</button>
+                    </div>
+
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+                        <div className='bg-[#0d0c1d] text-center rounded-lg p-6 shadow-lg ring-2 ring-purple-500 ring-offset-2 ring-offset-[#0d0c1d]'>
+                            <div className='flex justify-center mb-4'>
+                                <img src="fb.jfif" alt="" className='h-12 rounded-full' />
+                            </div>
+                            <h3 className='text-xl text-white font-semibold'>FaceBook</h3>
+                            <p className='text-gray-400 mt-2'>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div className='bg-[#0d0c1d] text-center rounded-lg p-6 shadow-lg ring-2 ring-purple-500 ring-offset-2 ring-offset-[#0d0c1d]'>
+                            <div className='flex justify-center mb-4'>
+                                <img src="pin.png" alt="" className='h-12 rounded-full' />
+                            </div>
+                            <h3 className='text-xl text-white font-semibold'>FaceBook</h3>
+                            <p className='text-gray-400 mt-2'>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div className='bg-[#0d0c1d] text-center rounded-lg p-6 shadow-lg ring-2 ring-purple-500 ring-offset-2 ring-offset-[#0d0c1d]'>
+                            <div className='flex justify-center mb-4'>
+                                <img src="twit.png" alt="" className='h-12 rounded-full' />
+                            </div>
+                            <h3 className='text-xl text-white font-semibold'>FaceBook</h3>
+                            <p className='text-gray-400 mt-2'>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                        <div className='bg-[#0d0c1d] text-center rounded-lg p-6 shadow-lg ring-2 ring-purple-500 ring-offset-2 ring-offset-[#0d0c1d]'>
+                            <div className='flex justify-center mb-4'>
+                                <img src="insta.jpg" alt="" className='h-12 rounded-full' />
+                            </div>
+                            <h3 className='text-xl text-white font-semibold'>FaceBook</h3>
+                            <p className='text-gray-400 mt-2'>Lorem ipsum dolor sit amet consectetur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/*  */}
+            <section className='bg-[#0d0c1d] py-16 px-4'>
+                <div className='contents mx-auto text-center'>
+                    <h2 className='text-4xl text-white font-semibold'>Get Better Results With</h2>
+                    <h3 className='text-5xl text-purple-500 font-bold mt-3'>Amazing Features</h3>
+
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto'>
+                        {features.map((fea, indx) => {
+                            return (
+                                <div key={indx} className='flex items-center bg-[#12122b] p-6 rounded-lg border border-[#908fad] mx-auto'>
+                                    <div className='w-12 h-12 flex items-center justify-center bg-[#1c1b2e] rounded-full mr-4'>
+                                        {fea.icon}
+                                    </div>
+                                    <h4 className='text-xl text-white font-semibold mb-2'>{fea.title}</h4>
+                                    <p className='text-gray-400 text-sm'>{fea.description}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                </div>
+            </section>
+
+            {/*  */}
+            <div className='bg-[#0d0c1d] py-12'>
+                <div className='max-w-7xl mx-auto px-6'>
+                    <div className='text-center mb-10'>
+                        <h2 className='text-4xl font-bold text-white'>Our Blogs</h2>
+                        <p className='text-gray-400 mt-4'>Start by creating a new Vite project if you don’t have one set up already. The most common approach is to use Create Vite.</p>
+                        <div className='flex justify-center mt-10'>
+                            <button className='bg-pink-500 text-white py-2 px-8 rounded-full hover:bg-pink-600'>VIEW ALL</button>
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col md:flex-row items-center justify-center md:space-x-6 space-y-6 md:space-y-0'>
+                        <div className='bg-[#141332] p-6 rounded-lg text-white max-w-xs shadow-lg ring-2 ring-purple-500 '>
+                            <img src="img1.png " className='rounded-lg mb-4'></img>
+                            <h3 className='text-xl font-semibold mb-2'>Start by creating a new Vite project if you don’t have one set up already. </h3>
+                            <p className='text-gray-400 '>Start by creating a new Vite project if you don’t have one set up already. </p>
+                        </div>
+                        <div className='bg-[#141332] p-6 rounded-lg text-white max-w-xs shadow-lg ring-2 ring-purple-500 '>
+                            <img src="img1.png " className='rounded-lg mb-4'></img>
+                            <h3 className='text-xl font-semibold mb-2'>Start by creating a new Vite project if you don’t have one set up already. </h3>
+                            <p className='text-gray-400 '>Start by creating a new Vite project if you don’t have one set up already. </p>
+                        </div>
+                        <div className='bg-[#141332] p-6 rounded-lg text-white max-w-xs shadow-lg ring-2 ring-purple-500 '>
+                            <img src="img1.png " className='rounded-lg mb-4'></img>
+                            <h3 className='text-xl font-semibold mb-2'>Start by creating a new Vite project if you don’t have one set up already. </h3>
+                            <p className='text-gray-400 '>Start by creating a new Vite project if you don’t have one set up already. </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            {/*  */}
+            <div className='bg-[#0d0c1d] py-12 flex justify-center items-center'>
+                <div className='bg-[#141332] max-w-4xl w-full px-8 py-6 rounded border boder-gray-600 flex flex-col md:flex-row items-center justify-between space-y-4 space-x-6'>
+                    <div className='text-left'>
+                        <h2 className='text-2xl font-bold text-white'>Subscribe Our Newsletter</h2>
+                        <p className='text-gray-400 mt-2'>Start by creating a new Vite project if you don’t have one set up already. The most common approach is to use Create Vite.</p>
+                    </div>
+
+                    <div className='flex items-center space-x-4 w-full md:w-auto'>
+                        <input type="emal" placeholder='Enter Email' className='bg-[#0c0b19] text-white border border-gray-600 rounded-full py-2 px-4 w-full md:w-auto'></input>
+                        <button className='bg-gradient-to-r from-purple-400 to-pink-500 text-white py-2 px-4 w-full md:w-auto font-semibold rounded-full'>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <footer className="bg-[#0b0b19] text-center py-6">
+                <div className='border-t border-gray w-full'>
+                    <div className='text-sm text-gray-400 flex justify-between items-center max-w-screen-xl mx-auto px-4 pt-2'>
+                        <span>Bal Template Kit By SAIKAT KARAR</span>
+                        <span>Copyright &#9400; All rights reserved.</span>
+                    </div>
+                </div>
+            </footer>
         </>
     )
 }
